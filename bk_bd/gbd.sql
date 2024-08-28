@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-03-2024 a las 17:14:12
+-- Tiempo de generación: 28-08-2024 a las 07:55:21
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -34,15 +34,6 @@ CREATE TABLE `basesdedatos` (
   `UsuarioID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `basesdedatos`
---
-
-INSERT INTO `basesdedatos` (`BaseDeDatosID`, `Nombre`, `Cotejamiento`, `UsuarioID`) VALUES
-(20, 'GBD', 'utf8_general_ci', 1),
-(22, 'Supermercado', 'utf8mb4_unicode_ci', 1),
-(25, 'GBD2', 'utf8mb4_unicode_ci', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -59,34 +50,6 @@ CREATE TABLE `columnas` (
   `TablaID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `columnas`
---
-
-INSERT INTO `columnas` (`ColumnaID`, `Nombre`, `Tipo`, `AutoIncrement`, `PK`, `Nulo`, `TablaID`) VALUES
-(56, 'id_usuarios', 'INT', 'Si', 'Si', 'No', 25),
-(57, 'Nombre_usuario', 'VARCHAR(20)', 'No', 'No', 'No', 25),
-(58, 'Nombre_completo', 'VARCHAR(30)', 'No', 'No', 'No', 25),
-(59, 'edad', 'INT', 'No', 'No', 'No', 25),
-(61, 'id_sucursal', 'INT', 'Si', 'Si', 'No', 26),
-(62, 'nombre_sucursal', 'VARCHAR(40)', 'No', 'No', 'No', 26),
-(63, 'direccion', 'TEXT', 'No', 'No', 'No', 26),
-(64, 'RFC', 'VARCHAR(70)', 'No', 'No', 'No', 26),
-(65, 'id_personas', 'INT', 'Si', 'Si', 'No', 27),
-(66, 'nombre_persona', 'VARCHAR(40)', 'No', 'No', 'No', 27),
-(67, 'edad', 'INT', 'No', 'No', 'No', 27),
-(72, 'id_prueba', 'INT', 'Si', 'Si', 'No', 29),
-(73, 'nombre_prueba', 'VARCHAR(40)', 'No', 'No', 'No', 29),
-(74, 'id_prueba', 'INT', 'Si', 'Si', 'No', 30),
-(75, 'nombre', 'TEXT', 'No', 'No', 'No', 30),
-(76, 'edad', 'INT', 'No', 'No', 'No', 30),
-(77, 'rfc', 'VARCHAR(40)', 'No', 'No', 'No', 30),
-(78, 'curp', 'VARCHAR(50)', 'No', 'No', 'No', 30),
-(79, 'dia_nacimiento', 'VARCHAR(50)', 'No', 'No', 'No', 30),
-(80, 'SS', 'VARCHAR(50)', 'No', 'No', 'No', 30),
-(81, 'Matricula', 'VARCHAR(50)', 'No', 'No', 'No', 30),
-(82, 'ine', 'VARCHAR(50)', 'No', 'No', 'No', 30);
-
 -- --------------------------------------------------------
 
 --
@@ -98,25 +61,6 @@ CREATE TABLE `datos` (
   `ColumnaID` int(11) NOT NULL,
   `Valor` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `datos`
---
-
-INSERT INTO `datos` (`DatoID`, `ColumnaID`, `Valor`) VALUES
-(26, 61, '1'),
-(27, 62, 'Pedrito supermarket'),
-(28, 63, 'Avenida san pablo del meoyo'),
-(29, 64, 'JKK384PPP'),
-(34, 65, '1'),
-(35, 66, 'Lalox'),
-(36, 67, '18'),
-(46, 56, '2'),
-(47, 57, 'Yochix'),
-(48, 58, 'Sergio Eduardo '),
-(49, 59, '23'),
-(54, 72, '1'),
-(55, 73, 'Prueba3');
 
 -- --------------------------------------------------------
 
@@ -130,17 +74,6 @@ CREATE TABLE `tablas` (
   `Motor_alm` varchar(30) NOT NULL,
   `BaseDeDatosID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `tablas`
---
-
-INSERT INTO `tablas` (`TablaID`, `Nombre`, `Motor_alm`, `BaseDeDatosID`) VALUES
-(25, 'usuarios', 'MyISAM', 20),
-(26, 'Sucursal', 'InnoDB', 22),
-(27, 'personas', 'MyISAM', 20),
-(29, 'prueba44', 'MyISAM', 25),
-(30, 'prueba55', 'MyISAM', 25);
 
 -- --------------------------------------------------------
 
@@ -160,7 +93,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`UsuarioID`, `Usuario`, `PasswordHash`, `Rol`) VALUES
-(1, 'Sergio', 'cheyo2003', 'admin');
+(1, 'Admin', 'Admin_C', 'admin');
 
 --
 -- Índices para tablas volcadas
@@ -208,25 +141,25 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `basesdedatos`
 --
 ALTER TABLE `basesdedatos`
-  MODIFY `BaseDeDatosID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `BaseDeDatosID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `columnas`
 --
 ALTER TABLE `columnas`
-  MODIFY `ColumnaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `ColumnaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT de la tabla `datos`
 --
 ALTER TABLE `datos`
-  MODIFY `DatoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `DatoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT de la tabla `tablas`
 --
 ALTER TABLE `tablas`
-  MODIFY `TablaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `TablaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
