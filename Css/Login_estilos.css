@@ -1,0 +1,12 @@
+body{
+
+   
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s; /* Smooth transition between images */
+    
+
+
+}

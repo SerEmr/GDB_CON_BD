@@ -1,0 +1,17 @@
+.seccion_titulo_datos{
+    text-align: center;
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 8rem;
+    background-color: white;
+}
+
+.seccion_tabla_datos{
+    text-align: center;
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 4rem;
+    background-color: white;
+}

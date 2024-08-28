@@ -1,0 +1,24 @@
+
+.seccion_titulo_estructura{
+    text-align: center;
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 10rem;
+    background-color: white;
+}
+
+
+
+.seccion_estructura{
+    text-align: center;
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    background-color: white;
+}
+
+.img_pk{
+    width: 35px;
+}

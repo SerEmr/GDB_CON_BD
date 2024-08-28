@@ -1,0 +1,118 @@
+body{
+    background-color:rgb(32, 83, 31);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.img_coco-nav{
+    width: 4rem;
+}
+
+.img_coco{
+    width: 8rem;
+}
+
+
+nav{
+    text-align: center;
+}
+
+h5{
+
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.navigation{
+
+    margin: 0 25rem;
+    
+}
+
+.div_bienvenida{
+
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: white;
+}
+
+.div_bd_actuales{
+    padding: 2rem;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: white;
+}
+
+.info_gestor{
+    
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.logo_bdC{
+    width: 25px;
+}
+
+.bd_nombres a, .bd_nombres img {
+    display: inline-block;
+    vertical-align: middle; /* Alinea verticalmente si tienen diferentes alturas */
+  }
+  
+  .bd_nombres img {
+    margin-left: 10px; /* Ajusta según sea necesario */
+  }
+
+
+.seccion_tablas{
+
+    text-align: center;
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    background-color: white;
+}
+
+.botones_accion{
+
+    text-align: center;
+    padding: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 5rem;
+
+}
+
+.seccion_conf_column{
+    text-align: center;
+    padding: 2rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 10rem;
+    background-color: white;
+}
+
+.img_tabla{
+  
+    width: 16px; 
+    height: auto;
+    margin-right: 5px;
+}
+
+.img_columna{
+
+    width: 16px;
+}
+
+.img_pk{
+    width: 25px;
+}
